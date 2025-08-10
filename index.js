@@ -1,1 +1,1 @@
-module.exports = require('./evilpart');
+module.exports = require("./evilpart");

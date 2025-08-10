@@ -1,0 +1,15 @@
+name: Docker Build
+
+on:
+  push:
+    paths:
+      - "Dockerfile"
+      - ".github/workflows/docker.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Docker image
+        run: docker build -t sample-image .
